@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/welcomepic" />
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text=""
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/btn_sign_in"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/welcomepic"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/monte"
+            android:text="Profile Details"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/monte" />
+
+        <ImageView
+            android:id="@+id/imageView_profile_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView_profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/monte"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            android:textColor="@color/button_material_light"
+            android:textStyle="bold|italic"
+            app:fontFamily="@font/monte" />
+
+        <TextView
+            android:id="@+id/textView_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/monte"
+            android:text="Email"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/button_material_light"
+            android:textStyle="bold|italic"
+            app:fontFamily="@font/monte" />
+
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="LogOut" />
+
+        <Button
+            android:id="@+id/User_Mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_logout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:onClick="usermodes"
+            android:text="Select User Mode" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@+id/profile_layout"
+        android:fontFamily="@font/monte"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Welcome to Rentz!  "
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:textStyle="bold|italic"
+        app:fontFamily="@font/monte" />
+
+</RelativeLayout>
